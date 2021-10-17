@@ -1,0 +1,174 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Climate Weather App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/app.css">
+
+  <meta name="theme-color" content="#fafafa">
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,600;0,900;1,700&display=swap" rel="stylesheet">
+
+  <!-- font awesome icons -->
+  <script src="https://kit.fontawesome.com/d2ee8a6b5d.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <!-- <section class="cover">
+    <div class="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.17 22.35"><defs><style>.cls-1{fill:#dea800;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path d="M3.74,20.28A7,7,0,0,1,1,17.56a7.77,7.77,0,0,1-1-3.94A7.65,7.65,0,0,1,1,9.7,6.91,6.91,0,0,1,3.74,7a8,8,0,0,1,4-1,7.67,7.67,0,0,1,3.45.75A5.63,5.63,0,0,1,13.56,9l-1.5,1a4.75,4.75,0,0,0-1.88-1.66,5.56,5.56,0,0,0-2.47-.56,5.81,5.81,0,0,0-2.92.73,5.14,5.14,0,0,0-2,2.06,6.29,6.29,0,0,0-.72,3,6.29,6.29,0,0,0,.72,3.06,5.24,5.24,0,0,0,2,2.05,5.91,5.91,0,0,0,2.92.72,5.69,5.69,0,0,0,2.47-.54,4.65,4.65,0,0,0,1.88-1.65l1.5,1a5.7,5.7,0,0,1-2.41,2.2,7.75,7.75,0,0,1-3.44.75A8.13,8.13,0,0,1,3.74,20.28Z"/><path d="M17.29,0h2V21.1h-2Z"/><path d="M24.91,2.45a1.44,1.44,0,0,1-.43-1,1.36,1.36,0,0,1,.43-1A1.43,1.43,0,0,1,26,0,1.5,1.5,0,0,1,27,.41a1.33,1.33,0,0,1,.42,1A1.46,1.46,0,0,1,27,2.45a1.54,1.54,0,0,1-2.11,0Zm0,3.69h2v15h-2Z"/><path class="cls-1" d="M55.2,7.4a7.07,7.07,0,0,1,1.69,5.15,6.69,6.69,0,0,0,5.23,6.65L62.06,21a8.77,8.77,0,0,1-5.58-.56c-4.17-1.95-4.93-6.59-5-7A4.57,4.57,0,0,0,51.33,12a2.41,2.41,0,0,0-.46-1,2.07,2.07,0,0,0-1.72-.77,2.49,2.49,0,0,0-2,.85,3.9,3.9,0,0,0-.74,2.59v7.65h-5.4V13.43c0-2.11-.78-3.16-2.33-3.16a2.51,2.51,0,0,0-2,.85A3.85,3.85,0,0,0,36,13.71v7.65H30.58V6h5.15V7.57a5.39,5.39,0,0,1,2-1.41,7,7,0,0,1,2.58-.47,6.74,6.74,0,0,1,2.9.6,5,5,0,0,1,2.07,1.82,6,6,0,0,1,2.31-1.79,7.29,7.29,0,0,1,3-.63A6.1,6.1,0,0,1,55.2,7.4Z"/><path class="cls-1" d="M72.73,7.44a6.74,6.74,0,0,1,2,5.36,6,6,0,0,0,3.06,5.81,5.83,5.83,0,0,0,4.37.24l1.51,2.06c-2.1,1.87-4.63,1.7-7.15.71a8.51,8.51,0,0,1-4.69-4.13A7.89,7.89,0,0,1,68,21.06a7.44,7.44,0,0,1-2.83.56,7.12,7.12,0,0,1-3.1-.63,4.51,4.51,0,0,1-2-1.69,4.44,4.44,0,0,1-.67-2.43,4,4,0,0,1,1.68-3.4,8.86,8.86,0,0,1,5.17-1.21h3.07c-.09-1.63-1.18-2.44-3.27-2.44a7.32,7.32,0,0,0-2.24.35,6.2,6.2,0,0,0-1.94,1L60.07,7.48a10.26,10.26,0,0,1,3.12-1.32,14.92,14.92,0,0,1,3.68-.47A8.74,8.74,0,0,1,72.73,7.44ZM68.32,17.75a2.49,2.49,0,0,0,1-1.34V15.08H67c-1.57,0-2.36.52-2.36,1.56a1.38,1.38,0,0,0,.54,1.14,2.37,2.37,0,0,0,1.48.43A3,3,0,0,0,68.32,17.75Z"/><path class="cls-1" d="M91.92,19.46a43.47,43.47,0,0,1-4.79,1.93,9.3,9.3,0,0,1-2.09.23,6.65,6.65,0,0,1-4.63-1.48,5.66,5.66,0,0,1-1.63-4.41V10.56H76.54v-4h2.24v-4h5.41v4h3.52v4H84.19v5.11a1.8,1.8,0,0,0,.44,1.3,1.55,1.55,0,0,0,1.18.47,24.87,24.87,0,0,0,4.78-1.76Z"/><path class="cls-1" d="M106.08,15H94.88a3.12,3.12,0,0,0,1.32,1.83,4.41,4.41,0,0,0,2.46.64,5.3,5.3,0,0,0,1.92-.31,5.79,5.79,0,0,0,1.64-1l2.84,3c-1.5,1.66-3.69,2.5-6.57,2.5a10.41,10.41,0,0,1-4.75-1,7.52,7.52,0,0,1-4.29-7,7.69,7.69,0,0,1,1.09-4.08,7.59,7.59,0,0,1,3-2.83,9.69,9.69,0,0,1,8.53-.08,7.4,7.4,0,0,1,3,2.76,8.2,8.2,0,0,1,1.09,4.28S106.14,14.17,106.08,15ZM95.86,10.24a3.21,3.21,0,0,0-1.06,1.94h6.31A3.22,3.22,0,0,0,100,10.24a3.43,3.43,0,0,0-4.18,0Z"/></g></g></svg>
+    </div>
+    <div class="description">
+      <p>Sunny day today? A little rain? Let us find the activity of the day for you and your loved ones.</p>
+    </div>
+    <div class="button">
+      <button>Let's go outside</button>
+    </div>
+    <div class="homesketch">
+
+  </section> -->
+
+  <section class="inside">
+    <div style="background-image: url('jumprope1-100.jpg');"></div>
+    <div class="details">
+      <h3>Annapolis, MD</h3>
+      <h3>Sunday</h3>
+    </div>
+    <div class="today">
+      <div class="current">
+        <h1>70º</h1>
+      </div>
+      <div class="high">
+        <h2>HIGH</h2>
+        <h3>78</h3>
+      </div>
+      <div class="low">
+        <h2>LOW</h2>
+        <h3>64</h3>
+      </div>
+      <div class="sundown">
+        <h2>SUNDOWN</h2>
+        <h3>6:42PM</h3>
+      </div>
+    </div>
+
+    <div class="sixday">
+      <h2>A Glance Ahead</h2>
+      <div class="monday">
+        <div class="icon">
+          <i class="fas fa-cloud"></i>
+        </div>
+        <div class="temp">
+          <h3>64</h3>
+        </div>
+        <div class="hl">
+          <h4>71 | 64</h4>
+        </div>
+        <div class="time">
+          <h4>7:00PM</h4>
+        </div>
+      </div>
+      <div class="tuesday">
+        <div class="icon">
+          <i class="fas fa-cloud"></i>
+        </div>
+        <div class="temp">
+          <h3>63</h3>
+        </div>
+        <div class="hl">
+          <h4>65 | 60</h4>
+        </div>
+        <div class="time">
+          <h4>6:45PM</h4>
+        </div>
+      </div>
+      <div class="wednesday">
+        <div class="icon">
+          <i class="fas fa-cloud-sun"></i>
+        </div>
+        <div class="temp">
+          <h3>72</h3>
+        </div>
+        <div class="hl">
+          <h4>74 | 70</h4>
+        </div>
+        <div class="time">
+          <h4>6:55PM</h4>
+        </div>
+      </div>
+      <div class="thursday">
+        <div class="icon">
+          <i class="fas fa-cloud-sun"></i>
+        </div>
+        <div class="temp">
+          <h3>73</h3>
+        </div>
+        <div class="hl">
+          <h4>75 | 70</h4>
+        </div>
+        <div class="time">
+          <h4>6:55PM</h4>
+        </div>
+      </div>
+      <div class="friday">
+        <div class="icon">
+          <i class="fas fa-sun"></i>
+        </div>
+        <div class="temp">
+          <h3>75</h3>
+        </div>
+        <div class="hl">
+          <h4>77 | 70</h4>
+        </div>
+        <div class="time">
+          <h4>6:48PM</h4>
+        </div>
+      </div>
+      <div class="saturday">
+        <div class="icon">
+          <i class="fas fa-cloud"></i>
+        </div>
+        <div class="temp">
+          <h3>64</h3>
+        </div>
+        <div class="hl">
+          <h4>71 | 64</h4>
+        </div>
+        <div class="time">
+          <h4>7:00PM</h4>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="activity">
+      <h2>Today's Activity:</h2>
+      <h3>Jump Rope</h3>
+    </div>
+
+    </div>
+
+  
+
+  <script src="js/vendor/modernizr-3.7.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
