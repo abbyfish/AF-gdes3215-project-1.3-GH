@@ -170,6 +170,6 @@ $('button').click(function(){
   $('.cover').addClass('open');
 })
 
-// $('.current h1').click(function(){
-//   $('.home').removeClass('open');
-// })
+$('.current h1').click(function(){
+  $('.home').removeClass('open');
+})

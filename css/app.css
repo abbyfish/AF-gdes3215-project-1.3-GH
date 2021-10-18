@@ -47,6 +47,7 @@ button {
     padding: 1rem;
     border-radius: 8px;
     border-color: #fff;
+    box-shadow: none;
 }
 /*<<<<<<COVER SCREEN>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
@@ -61,7 +62,7 @@ button {
 .details {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    column-gap: 22rem;
+/*    column-gap: 22rem;*/
     font-size: 14px;
     padding-top: 2rem;
     padding-left: 1rem;
@@ -77,12 +78,13 @@ button {
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 1fr 1fr 1fr;
+    background: url(../img/jumprope1-100.jpg) no-repeat center;
 }
 
 .current {
     grid-column: 2;
     padding-right: 2rem;
-    font-size: 60px;
+    font-size: 50px;
     text-align: right;
     grid-row: 1/span 3;
 }
@@ -137,11 +139,10 @@ button {
     grid-template-rows: 0.2fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
     row-gap: 0.5rem;
     display: grid;
-    background-image: url(jumprope1.svg);
 }
+
 .sixday h2 {
     font-weight: 600;
-    padding-left: 2rem;
     text-transform: uppercase;
     letter-spacing: 4px;
     grid-row: 1;
