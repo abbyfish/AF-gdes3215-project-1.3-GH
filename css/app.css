@@ -63,9 +63,9 @@ button {
     display: grid;
     grid-template-columns: 2fr 1fr;
 /*    column-gap: 22rem;*/
-    font-size: 14px;
+    font-size: 16px;
     padding-top: 2rem;
-    padding-left: 1rem;
+    padding-left: 2rem;
     border-collapse: collapse;
     row-gap: 1px;
     text-transform: uppercase;
@@ -78,7 +78,8 @@ button {
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 1fr 1fr 1fr;
-    background: url(../img/jumprope1-100.jpg) no-repeat center;
+    background: url(../img/svg/rain_img.svg) no-repeat center;
+
 }
 
 .current {
@@ -348,8 +349,14 @@ button {
         font-weight: 500;
     }
 
+/*******ICON COLORS****************************/
+.iconcolor {
+    color:#DEA800 ;
+}
+
+
 /*********ACTIVITY*********************/
-.activity {
+/*.activity {
     text-align: center;
 }
 .activity h2 {
@@ -360,7 +367,7 @@ button {
     font-weight: 300;
     padding-bottom: 1rem;
 }
-
+*/
 /*********BUTTON PROPERTY*********************/
 .open {
   transform: translateY(-100%);

@@ -2,9 +2,9 @@
 // add the latitude and longitude for your location one lines 6 and 7
 // move on to adding your data requests on line 22
 function weatherBalloon() {
-  var key = '';
-  var lat = '';
-  var lon = '';
+  var key = '4f4e72406c8736d066812e9c8362d75f';
+  var lat = '38.9784';
+  var lon = '-76.4922';
   fetch('https://api.openweathermap.org/data/2.5/onecall?lat=' + lat + '&lon=' + lon + '&appid=' + key)  
   .then(function(resp) { return resp.json() }) // Convert data to json
   .then(function(data) {
@@ -18,10 +18,52 @@ function weatherBalloon() {
 
 // display weather information
 function drawWeather( d ) {
+  //current day
+  $('.current h1').html(convertTemp(d.current.temp));
+  $('.high h3').html(convertTemp(d.daily [0].temp.max));
+  $('.low h3').html(convertTemp(d.daily [0].temp.min));
+  $('.sundown h3').html( convertTime(d.current.sunset) );
 
-  // add your specfic weather requests here
+  //day 1
+  $('.monday h3').html(displayDay(1) );
+  $('.monday .hl h4').html(convertTemp(d.daily [1].temp.max));
+  $('.monday .time h4').html( convertTime(d.daily [1].sunset) );
+  $('.monday .icon').html(printGraphic(d.daily [1].weather[0].description) );
+
+  //day 2
+  $('.tuesday h3').html(displayDay(2) );
+  $('.tuesday .hl h4').html(convertTemp(d.daily [2].temp.max));
+  $('.tuesday .time h4').html( convertTime(d.daily [2].sunset) );
+  $('.tuesday .icon').html(printGraphic(d.daily [2].weather[0].description) );
+
+  //day 3
+  $('.wednesday h3').html(displayDay(3) );
+  $('.wednesday .hl h4').html(convertTemp(d.daily [3].temp.max));
+  $('.wednesday .time h4').html( convertTime(d.daily [3].sunset) );
+  $('.wednesday .icon').html(printGraphic(d.daily [3].weather[0].description) );
+
+  //day 4
+  $('.thursday h3').html(displayDay(4) );
+  $('.thursday .hl h4').html(convertTemp(d.daily [4].temp.max));
+  $('.thursday .time h4').html( convertTime(d.daily [4].sunset) );
+  $('.thursday .icon').html(printGraphic(d.daily [4].weather[0].description) );
+
+  //day 5
+  $('.friday h3').html(displayDay(5) );
+  $('.friday .hl h4').html(convertTemp(d.daily [5].temp.max));
+  $('.friday .time h4').html( convertTime(d.daily [5].sunset) );
+  $('.friday .icon').html(printGraphic(d.daily [5].weather[0].description) );
+
+  //day 6
+  $('.saturday h3').html(displayDay(6) );
+  $('.saturday .hl h4').html(convertTemp(d.daily [6].temp.max));
+  $('.saturday .time h4').html( convertTime(d.daily [6].sunset) );
+  $('.saturday .icon').html(printGraphic(d.daily [6].weather[0].description) );
 
 }
+  // add your specfic weather requests here
+
+
 
 
 /* -----------------------------------------------
@@ -44,6 +86,7 @@ function changeTheme(d){
   // if the description includes the word "rain"
   if( d.indexOf('rain') > 0 ) {
     $('body').addClass('rainy');
+    return
 
   // if the description includes the word "cloud"
   } else if( d.indexOf('cloud') > 0 ) {
@@ -69,16 +112,28 @@ function printGraphic(d){
   
   // if the description includes the word "rain"
   if( d.indexOf('rain') > 0 ) {
-    return '<img src="img/svg/Cloud.svg" alt="Cloud icon">';
+    return '<img src="img/svg/Cloud-Drizzle.svg" alt="Cloud icon">';
   
   // if the description includes the word "cloud"
   } else if( d.indexOf('cloud') > 0 ) {
-    return '<img src="img/svg/Cloud-Rain.svg" alt="Cloud icon">';
+    return '<img src="img/svg/Cloud.svg" alt="Cloud icon">';
   
-  // if the description includes the word "sunny"
-  } else if( d.indexOf('sunny') > 0 ) {
+  // if the description includes the word "clear"
+  } else if( d.indexOf('clear') > 0 ) {
     return '<img src="img/svg/Sun.svg" alt="Cloud icon">';
-  
+
+  // if the description includes the word "party cloudy"
+  } else if( d.indexOf('partly') > 0 ) {
+    return '<img src="img/svg/Cloud-Sun.svg" alt="Cloud icon">';
+
+  // if the description includes the word "fog"
+  } else if( d.indexOf('fog') > 0 ) {
+    return '<img src="img/svg/Cloud-Fog.svg" alt="Cloud icon">';
+
+  // if the description includes the word "thunder"
+  } else if( d.indexOf('thunder') > 0 ) {
+    return '<img src="img/svg/Cloud-Fog.svg" alt="Cloud icon">';
+ 
   // if none of those cases are true, assume it's clear
   } else {
     return '<img src="img/svg/Sun.svg" alt="Cloud icon">';
@@ -140,7 +195,7 @@ function displayDay(n){
   weekday[3] = "Wed";
   weekday[4] = "Thu";
   weekday[5] = "Fri";
-  weekday[6] = "Sun";
+  weekday[6] = "Sat";
 
   var dispDay = d.getDay() + n;
 
