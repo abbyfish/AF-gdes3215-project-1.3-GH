@@ -78,8 +78,6 @@ button {
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 1fr 1fr 1fr;
-    background: url(../img/svg/rain_img.svg) no-repeat center;
-
 }
 
 .current {
@@ -355,19 +353,22 @@ button {
 }
 
 
-/*********ACTIVITY*********************/
-/*.activity {
-    text-align: center;
+/*********BACKGROUND*********************/
+.rainy {
+    background: url(../img/svg/rain_img.svg) no-repeat center;
 }
-.activity h2 {
-    font-weight: 600;
-    color: #DEA800;
+.thunder {
+    background: url(../img/svg/thunder_img.svg) no-repeat center;
 }
-.activity h3 {
-    font-weight: 300;
-    padding-bottom: 1rem;
+.sunny {
+    background: url(../img/svg/jumprope1.svg) no-repeat center;
 }
-*/
+.snowy {
+   background: url(../img/svg/snow_img.svg) no-repeat center; 
+}
+.misty {
+background: url(../img/svg/fog_img.svg) no-repeat center;
+}
 /*********BUTTON PROPERTY*********************/
 .open {
   transform: translateY(-100%);

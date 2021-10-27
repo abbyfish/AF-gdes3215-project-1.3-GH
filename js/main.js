@@ -60,6 +60,8 @@ function drawWeather( d ) {
   $('.saturday .time h4').html( convertTime(d.daily [6].sunset) );
   $('.saturday .icon').html(printGraphic(d.daily [6].weather[0].description) );
 
+  changeTheme(d.current.weather[0].description);
+
 }
   // add your specfic weather requests here
 
@@ -85,20 +87,31 @@ function changeTheme(d){
   
   // if the description includes the word "rain"
   if( d.indexOf('rain') > 0 ) {
-    $('body').addClass('rainy');
+    $('today').addClass('rainy');
     return
 
-  // if the description includes the word "cloud"
-  } else if( d.indexOf('cloud') > 0 ) {
-    $('body').addClass('cloudy');
+  // if the description includes the word "thunder"
+  } else if( d.indexOf('thunder') > 0 ) {
+    $('today').addClass('thunder');
 
   // if the description includes the word "sunny"  
   } else if( d.indexOf('sunny') > 0 ) {
-    $('body').addClass('sunny');
+    $('today').addClass('sunny');
+
+  // if the description includes the word "snow"  
+  } else if( d.indexOf('snow') > 0 ) {
+    $('today').addClass('snowy');
+
+  // if the description includes the word "mist"  
+  } else if( d.indexOf('mist') > 0 ) {
+    $('today').addClass('misty');
+
+
+
 
   // if none of those cases are true, assume it's clear
   } else {
-    $('body').addClass('clear');
+    $('today').addClass('sunny');
   }
 
 }
