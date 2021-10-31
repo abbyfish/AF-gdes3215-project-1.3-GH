@@ -355,19 +355,19 @@ button {
 
 
 /*********BACKGROUND*********************/
-.rainy {
+.today,.rainy {
     background: url(../img/svg/rain_img.svg) no-repeat center;
 }
-.thunder {
+.today,.thunder {
     background: url(../img/svg/thunder_img.svg) no-repeat center;
 }
-.sunny {
+.today,.sunny {
     background: url(../img/svg/jumprope1.svg) no-repeat center;
 }
-.snowy {
+.today,.snowy {
    background: url(../img/svg/snow_img.svg) no-repeat center; 
 }
-.misty {
+.today,.misty {
     background: url(../img/svg/fog_img.svg) no-repeat center;
 }
 /*********BUTTON PROPERTY*********************/

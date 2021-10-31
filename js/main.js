@@ -121,7 +121,7 @@ function changeTheme(d){
    Function for printing weather-specific graphic
    ----------------------------------------------- */
 
-function printGraphic(d){
+function printGraphic(d){ 
   
   // if the description includes the word "rain"
   if( d.indexOf('rain') > 0 ) {
@@ -135,7 +135,7 @@ function printGraphic(d){
   } else if( d.indexOf('clear') > 0 ) {
     return '<img src="img/svg/Sun.svg" alt="Cloud icon">';
 
-  // if the description includes the word "party cloudy"
+  // if the description includes the word "partly cloudy"
   } else if( d.indexOf('partly') > 0 ) {
     return '<img src="img/svg/Cloud-Sun.svg" alt="Cloud icon">';
 
